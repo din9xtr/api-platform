@@ -18,6 +18,14 @@ docker compose build --no-cache
 docker compose up -d
 ```
 
+## Tests
+
+The project uses a dedicated test database
+
+```bash
+make test
+```
+
 ## Original README
 
 [API_PLATFORM_README](API_PLATFORM_README)
