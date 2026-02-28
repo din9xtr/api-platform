@@ -7,7 +7,6 @@
 		{$FRANKENPHP_CONFIG}
 
 		worker {
-			env APP_RUNTIME Runtime\FrankenPhpSymfony\Runtime
 			file ./public/index.php
 
 			{$FRANKENPHP_WORKER_CONFIG}
@@ -32,8 +31,8 @@
 
 	mercure {
 		# Transport to use (default to Bolt)
-		transport_url {$MERCURE_TRANSPORT_URL:bolt:///data/mercure.db}
-		# Publisher JWT key
+#        transport inmemory
+        # Publisher JWT key
 		publisher_jwt {env.MERCURE_PUBLISHER_JWT_KEY} {env.MERCURE_PUBLISHER_JWT_ALG}
 		# Subscriber JWT key
 		subscriber_jwt {env.MERCURE_SUBSCRIBER_JWT_KEY} {env.MERCURE_SUBSCRIBER_JWT_ALG}
